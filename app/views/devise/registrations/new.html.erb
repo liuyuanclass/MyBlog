@@ -1,0 +1,36 @@
+<h2>注册</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+   <div>
+     <p>注册为</p>
+     <%= f.select :role, [['student', 'student'], ['teacher', 'teacher']]%>
+   </div>
+   <div>
+     <p>学号/教师工号</p>
+     <%= f.text_field :user_id, label: false, required: true, autofocus: true, placeholder: "用户名" %>
+   </div>
+  <div class="field">
+    <p>密码</p>
+    <% if @minimum_password_length %>
+    <em>(最少<%= @minimum_password_length %> 位)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <p>再输一次密码</p>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
