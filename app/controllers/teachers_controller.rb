@@ -12,6 +12,14 @@ class TeachersController < ApplicationController
   def show
   end
 
+  def mentor
+    @user =User.find(params[:id])
+    @teacher = Teacher.find_by_teacher_id(@user.user_id)
+    @businesses = Business.where(mentor: @teacher.teacher_id)
+
+    render "teachers/mentor"
+  end
+
   # GET /teachers/new
   def new
     @teacher = Teacher.new

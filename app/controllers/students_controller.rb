@@ -31,6 +31,7 @@ class StudentsController < ApplicationController
   # POST /students
   # POST /students.json
   def create
+
     @student = Student.new(student_params)
 
     respond_to do |format|
@@ -78,7 +79,8 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:student_id, :name, :role, :sex, :dormitory, :phone)
+
+      params.require(:student).permit(:student_id, :name, :class_id,:role, :sex, :dormitory, :phone)
     end
 
 end

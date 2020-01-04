@@ -12,18 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :teacher_id %>
+    <p>教师工号</p>
     <%= form.text_field :teacher_id %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+   <p>姓名</p>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
+    <p>权限</p>
+    <%= form.select :role,['teacher']%>
 
-    <%form.text_field :role=>"teacher" %>
   </div>
 
 
@@ -33,12 +34,12 @@
  </div>
 
   <div class="field">
-    <%= form.label :adress %>
+    <p>地址</p>
     <%= form.text_field :adress %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <p>联系电话</p>
     <%= form.text_field :phone %>
   </div>
 

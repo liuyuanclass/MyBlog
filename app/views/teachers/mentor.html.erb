@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>创新与创业项目</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>项目名称</th>
+    <th>学号</th>
+    <th>姓名</th>
+    <th>计划书</th>
+    <th>导师</th>
+    <th>状态</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @businesses.each do |business| %>
+    <tr>
+      <td><%= business.business_id %></td>
+      <td><%= business.leader_id %></td>
+      <td><%= business.leader_name %></td>
+      <td><%= link_to business.plan_url,file_download_path(business) %></td>
+      <td><%= business.mentor %></td>
+      <td><%= business.state %></td>
+      <td>
+      <%= form_with(model: business, local: true) do |form| %>
+         <%= form.select :state,[['待审核','待审核'],['审核中','审核中'],['审核通过','审核通过']] %>
+         <%= form.submit "确定" %>
+      <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to '返回',root_path %>

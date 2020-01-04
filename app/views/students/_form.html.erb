@@ -21,12 +21,15 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= form.label :class_id %>
+    <%= form.text_field :class_id %>
+  </div>
 
     <div class="field">
 
-      <%form.text_field :role=>"student" %>
+      <%= form.select :role,['student']%>
     </div>
-
 
   <div class="field">
     <p>性别</p>

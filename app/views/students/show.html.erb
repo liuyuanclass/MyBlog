@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Student:</strong>
+  <strong>学号:</strong>
   <%= @student.student_id %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>姓名:</strong>
   <%= @student.name %>
 </p>
 
 <p>
-  <strong>Role:</strong>
+  <strong>班级</strong>
+  <%= @student.class_id %>
+</p>
+
+<p>
+  <strong>权限:</strong>
   <%= @student.role %>
 </p>
 
 <p>
-  <strong>Sex:</strong>
+  <strong>性别:</strong>
   <%= @student.sex %>
 </p>
 
@@ -26,7 +31,7 @@
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>电话:</strong>
   <%= @student.phone %>
 </p>
 
