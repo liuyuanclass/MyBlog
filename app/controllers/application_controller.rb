@@ -25,7 +25,6 @@ class ApplicationController < ActionController::Base
   end
 
 
-
   def configure_permitted_parameters
 
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit(:login, :password, :remember_me)}

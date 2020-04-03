@@ -1,34 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Teacher:</strong>
+  <strong>教师ID:</strong>
   <%= @teacher.teacher_id %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>姓名:</strong>
   <%= @teacher.name %>
 </p>
 
 <p>
-  <strong>Role:</strong>
-  <%= @teacher.role %>
-</p>
-
-<p>
-  <strong>Sex:</strong>
+  <strong>性别:</strong>
   <%= @teacher.sex %>
 </p>
 
 <p>
-  <strong>Adress:</strong>
+  <strong>办公地点:</strong>
   <%= @teacher.adress %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>电话:</strong>
   <%= @teacher.phone %>
 </p>
 
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', root_path %>
+<%= link_to '修改', edit_teacher_path(@teacher) %> |
+<%= link_to '返回', root_path %>

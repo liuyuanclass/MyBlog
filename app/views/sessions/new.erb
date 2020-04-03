@@ -1,0 +1,23 @@
+<h1>登录账户</h1>
+
+<% if flash[:login_error] %>
+  <p><%= flash[:login_error] %></p>
+<% end %>
+
+<%= form_for :session, url: :sessions_create do |f| %>
+
+  <p>
+  <p>学号</p>
+    <%= f.text_field :account_id %>
+  </p>
+
+  <p>
+  <p>密码</p>
+    <%= f.password_field :password %>
+  </p>
+
+  <p><%= f.button "登录" %></p>
+
+<% end %>
+
+<%=link_to "返回",root_path %>

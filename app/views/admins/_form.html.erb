@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :admin_id %>
+    <p>用户ID</p>
     <%= form.text_field :admin_id %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <p>姓名</p>
     <%= form.text_field :name %>
   </div>
 
@@ -33,16 +33,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :adress %>
+    <p>办公地点</p>
     <%= form.text_area :adress %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <p>联系电话</p>
     <%= form.text_field :phone %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "修改"%>
   </div>
 <% end %>

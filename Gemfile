@@ -7,6 +7,7 @@ ruby '2.5.6'
 gem 'rails', '~> 6.0.1'
 gem 'bcrypt','3.1.13'
 gem 'bootstrap', '~> 4.4.1'
+gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
 gem 'carrierwave','2.0.2'
 

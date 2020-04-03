@@ -1,4 +1,4 @@
-Rails.application.configure do
+MyBlog::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -7,12 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   #ActionMailer配置
-  config.action_mailer.default_url_options = {:host =>'localhost：3000'}
-  config.action_mailer.delivery_method =:smtp
-  #更改为true以允许在开发期间发送电子邮件
-  config.action_mailer.perform_deliveries = false
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default :charset =>"utf-8"
+
   # Do not eager load code on boot.
   config.eager_load = false
 

@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   validates_format_of :user_id, with: /^[a-zA-Z0-9_\.]*$/, :multiline => true
   devise :database_authenticatable, :authentication_keys => [:user_id]
 

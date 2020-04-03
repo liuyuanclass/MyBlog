@@ -1,0 +1,9 @@
+<%= form_tag controller: "accounts",action: "charge" do%>
+
+  <%=label_tag(:balance,"充值") %>
+   <%=text_field_tag(:balance) %>
+  <%= submit_tag("确定") %>
+
+<% end %>
+
+<%=link_to "返回",root_path %>

@@ -1,34 +1,36 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Admin:</strong>
+<table  class="table table-hover">
+<th>
+  <strong>管理员账号:</strong>
   <%= @admin.admin_id %>
-</p>
+</th>
 
-<p>
-  <strong>Name:</strong>
+<th>
+  <strong>姓名:</strong>
   <%= @admin.name %>
-</p>
+</th>
 
-<p>
-  <strong>Role:</strong>
+<th>
+  <strong>权限:</strong>
   <%= @admin.role %>
-</p>
+</th>
 
-<p>
-  <strong>Sex:</strong>
+<th>
+  <strong>性别:</strong>
   <%= @admin.sex %>
-</p>
+</th>
 
-<p>
-  <strong>Adress:</strong>
-  <%= @admin.adress %>
-</p>
+<th>
+  <strong>办公地点:</strong>
+ <td><%= @admin.adress %></td>
+  </th>
 
-<p>
-  <strong>Phone:</strong>
+<th>
+  <strong>联系电话:</strong>
   <%= @admin.phone %>
-</p>
-
-<%= link_to 'Edit', edit_admin_path(@admin) %> |
-<%= link_to 'Back', root_path %>
+</th>
+<td>
+<%= link_to '修改', edit_admin_path(@admin) %> |</td>
+  <td>
+<%= link_to '返回',:back %></td>
+</table>

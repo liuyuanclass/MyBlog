@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :student_id %>
+    <p>学号</p>
     <%= form.number_field :student_id %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <p>姓名</p>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :class_id %>
+    <p>所在班级</p>
     <%= form.text_field :class_id %>
   </div>
 
     <div class="field">
-
-      <%= form.select :role,['student']%>
+      <p>权限</p>
+      <%= form.select :role,['学生']%>
     </div>
 
   <div class="field">
@@ -38,12 +38,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :dormitory %>
+   <p>寝室号</p>
     <%= form.number_field :dormitory %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <p>联系电话</p>
     <%= form.number_field :phone %>
   </div>
 
