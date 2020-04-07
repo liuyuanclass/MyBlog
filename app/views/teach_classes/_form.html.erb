@@ -1,0 +1,41 @@
+<%= form_with(model: teach_class, local: true) do |form| %>
+  <% if teach_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(teach_class.errors.count, "error") %> prohibited this teach_class from being saved:</h2>
+
+      <ul>
+        <% teach_class.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <p>教师工号</p>
+    <%= form.text_field :teacher_id %>
+  </div>
+
+  <div class="field">
+    <p>课程ID</p>
+    <%= form.text_field :course_id %>
+  </div>
+
+  <div class="field">
+    <p>课程名称</p>
+    <%= form.text_field :name%>
+  </div>
+
+  <div class="field">
+    <p>所在教室</p>
+    <%= form.text_field :classroom_id %>
+  </div>
+  <div>
+    <p>上课时间</p>
+    <%=form.text_field :class_time %>
+  </div>
+ <br>
+  <div class="actions">
+    <%= form.submit "确定" %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>学生ID:</strong>
+  <%= @schedule.student_id %>
+</p>
+
+<p>
+  <strong>教学课程:</strong>
+  <%= @schedule.teachclass_id %>
+</p>
+
+
+<%= link_to '返回',{controller: "schedules",action: "read",id:(current_user)} %>

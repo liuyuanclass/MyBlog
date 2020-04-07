@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @organize.student_id %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @organize.community_id %>
+</p>
+
+<p>
+  <strong></strong>
+</p>
+
+<%= link_to 'Edit', edit_organize_path(@organize) %> |
+<%= link_to 'Back', organize_read_path(current_user) %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>教学课程</h1>
+
+<table  class="table table-hover">
+  <thead>
+    <tr>
+      <th>教师ID</th>
+      <th>课程ID</th>
+      <th>教学教室</th>
+      <th>上课时间</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teach_classes.each do |teach_class| %>
+      <tr>
+        <td><%= teach_class.teacher_id %></td>
+        <td><%= teach_class.course_id %></td>
+        <td><%= teach_class.classroom_id %></td>
+        <td><%= teach_class.class_time %></td>
+        <td><%= link_to '详情', my_class_path(teach_class.id) %></td>
+        <td><%= link_to '修改', edit_teach_class_path(teach_class) %></td>
+        <td><%= link_to '删除', teach_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新建教学课程', new_teach_class_path %>
+<%= link_to '返回',root_path %>

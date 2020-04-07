@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>用户ID:</strong>
+  <%= @internet.user_id %>
+</p>
+
+<p>
+  <strong>账户余额:</strong>
+  <%= @internet.balance %>
+</p>
+
+<p>
+  <strong>交易类型:</strong>
+  <%= @internet.merchant %>
+</p>
+
+
+<%= link_to 'Back', read_internet_path(current_user) %>

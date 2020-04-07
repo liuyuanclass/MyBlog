@@ -1,0 +1,10 @@
+<%= form_tag controller: "sessions",action: "create_internet",id:(current_user) do%>
+
+  <%=label_tag(:balance,"充值") %>
+  <%=text_field_tag(:balance) %>
+  <%=label_tag(:balance,"密码") %>
+  <%=password_field_tag(:password) %>
+  <%= submit_tag("确定") %>
+
+<% end %>
+

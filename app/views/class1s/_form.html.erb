@@ -1,0 +1,34 @@
+<%= form_with(model: class1, local: true) do |form| %>
+  <% if class1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(class1.errors.count, "error") %> prohibited this class1 from being saved:</h2>
+
+      <ul>
+        <% class1.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container" style=" margin-left:40px">
+  <div class="field">
+    <p>班级名称</p>
+    <%= form.text_field :class_id %>
+  </div>
+
+  <div class="field">
+    <p>所属院系</p>
+    <%= form.text_field :depart_id %>
+  </div>
+
+  <div class="field">
+    <p>班主任ID</p>
+    <%= form.text_field :director_id %>
+  </div>
+  <br>
+  <div>
+    <%= form.submit "创建班级", :class=>"btn btn-outline-success" %>
+
+  </div>
+<% end %>
+</div>

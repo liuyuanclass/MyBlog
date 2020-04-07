@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>教师：</strong>
+  <%= @teach_class.teacher_id%>
+</p>
+
+<p>
+  <strong>课程名:</strong>
+  <%= @teach_class.course_id %>
+</p>
+
+<p>
+  <strong>教室:</strong>
+  <%= @teach_class.classroom_id %>
+</p>
+<p>
+  <strong>上课时间:</strong>
+  <%=@teach_class.class_time %>
+</p>
+<%= link_to 'Edit', edit_teach_class_path(@teach_class) %> |
+<%= link_to 'Back', root_path %>

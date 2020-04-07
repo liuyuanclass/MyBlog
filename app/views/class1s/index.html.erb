@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>班级管理</h1>
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">班级查找</a>
+  <%= form_tag controller: "class1s", action: "search", method: "post" do %>
+    <%= label_tag(:id, "搜索:") %>
+    <%= text_field_tag :id %>
+    <%= submit_tag("确定") %>
+  <% end %>
+</nav>
+<table  class="table table-hover">
+  <thead>
+    <tr>
+      <th>班级名称</th>
+      <th>所述系</th>
+      <th>班主任ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @class1s.each do |class1| %>
+      <tr>
+        <td><%= class1.class_id %></td>
+        <td><%= class1.depart_id %></td>
+        <td><%= class1.director_id %></td>
+        <td><%= link_to '详情', class1 %></td>
+        <td><%= link_to '修改', edit_class1_path(class1) %></td>
+        <td><%= link_to '删除', class1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新建班级', new_class1_path %>
+<%=link_to '返回',root_path %>

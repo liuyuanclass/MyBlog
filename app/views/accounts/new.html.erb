@@ -1,0 +1,30 @@
+<h1>完善您的校园账户信息</h1>
+<p id="notice"><%= notice %></p>
+
+<% if @account.errors.any? %>
+  <ul>
+    <% @account.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @account, url: :accounts_create do |f| %>
+  <p>
+     <p>学号</p>
+    <%= f.text_field :account_id %>
+  </p>
+
+  <p>
+  <p>密码</p>
+    <%= f.password_field :password %>
+  </p>
+
+  <p>
+  <p>验证您的你密码</p>
+    <%= f.password_field :password_confirmation %>
+  </p>
+
+  <p><%= f.button "提交" %></p>
+<% end %>
+<%= link_to "返回",root_path %>

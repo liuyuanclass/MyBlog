@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>社团名称:</strong>
+  <%= @community.community_id %>
+</p>
+
+<p>
+  <strong>社长:</strong>
+  <%= @community.leader %>
+</p>
+
+<p>
+  <strong>社团简介:</strong>
+  <%= @community.describe %>
+</p>
+
+<%= link_to '修改', edit_community_path(@community) %> |
+<%= link_to '返回', communities_path %>

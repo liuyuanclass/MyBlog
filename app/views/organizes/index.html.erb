@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>我加入的社团</h1>
+
+<table  class="table table-hover">
+  <thead>
+    <tr>
+      <th>社团名称</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @organizes.each do |organize| %>
+      <tr>
+        <td><%= organize.community_id %></td>
+        <td><%= link_to '社团详情', organize %></td>
+        <td><%= link_to '退出社团', organize, method: :delete, data: { confirm: '确定退出社团吗?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '加入社团', communities_path %>
+<%= link_to '我管理的社团',my_organize_path(current_user) %>
+<%= link_to "返回",root_path %>

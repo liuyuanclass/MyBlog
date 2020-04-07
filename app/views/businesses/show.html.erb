@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>项目名:</strong>
+  <%= @business.business_id %>
+</p>
+
+<p>
+  <strong>创建者:</strong>
+  <%= @business.leader_name %>
+</p>
+
+<p>
+  <strong>计划书:</strong>
+  <%= @business.plan_url %>
+</p>
+
+<p>
+  <strong>导师:</strong>
+  <%= @business.mentor %>
+</p>
+
+<p>
+  <strong>状态:</strong>
+  <%= @business.state %>
+</p>
+
+<%= link_to '修改', edit_business_path(@business) %> |
+<%= link_to '返回', root_path %>

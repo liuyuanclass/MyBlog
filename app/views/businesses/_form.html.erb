@@ -1,0 +1,46 @@
+<%= form_with(model: business, local: true) do |form| %>
+  <% if business.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(business.errors.count, "error") %> prohibited this business from being saved:</h2>
+
+      <ul>
+        <% business.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   <p>项目名称</p>
+    <%= form.text_field :business_id %>
+  </div>
+
+  <div class="field">
+    <p>学号</p>
+    <%= form.text_field :leader_id %>
+  </div>
+
+  <div class="field">
+    <p>姓名</p>
+    <%= form.text_field :leader_name %>
+  </div>
+
+  <div class="field">
+    <p>上传计划书</p>
+    <%= form.file_field :plan_url %>
+  </div>
+
+  <div class="field">
+    <p>导师</p>
+    <%= form.text_field :mentor %>
+  </div>
+
+  <div class="field">
+    <% form.text_field :state=>"待审核" %>
+  </div>
+ <br>
+  <div class="actions">
+    <%= form.submit "确定" %>
+  </div>
+<% end %>

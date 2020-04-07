@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>寝室号:</strong>
+  <%= @energy.dormitory %>
+</p>
+
+<p>
+  <strong>账户余额:</strong>
+  <%= @energy.balance %>
+</p>
+
+<p>
+  <strong>充值类型:</strong>
+  <%= @energy.merchant %>
+</p>
+
+
+<%= link_to '返回', read_energy_path(current_user) %>
