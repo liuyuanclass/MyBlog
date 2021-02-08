@@ -9,7 +9,7 @@ gem 'bcrypt','3.1.13'
 gem 'bootstrap', '~> 4.4.1'
 gem 'will_paginate-bootstrap'
 gem 'jquery-rails'
-gem 'carrierwave','2.0.2'
+gem 'carrierwave','2.1.1'
 
 gem 'devise'
 gem 'rspec','>=3'
